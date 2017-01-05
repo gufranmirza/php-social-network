@@ -1,0 +1,148 @@
+body {
+    background: #16a085;
+	margin: 0px;
+	padding: 0px;
+
+
+}
+.chat_box {
+	position:fixed;
+	background: white;
+	
+	width:250px;
+	
+	float:right;
+	bottom: 0px;
+	right:10px;
+	border-radius: 5px 5px 0 0 ;
+}
+.message_box {
+	
+	
+	background: white;
+	
+	width:250px;
+	
+	float:right;
+	
+	position:fixed;
+	bottom: 0px;
+	right:270px;
+	border-radius: 6px 6px 0 0 ;
+	
+	
+}
+.chat_head {
+	background:#d34500;
+	padding: 15px;
+	color: white;
+	border-radius: 5px 5px 0 0;
+	text-align:center;
+	cursor:pointer;
+}
+.chat_body{
+	
+	height: 350px;
+	
+}
+.user {
+	
+	padding: 9px 0px 20px 30px;
+	background: #eee;
+	position:relative;
+	margin-bottom: 5px;
+	margin-top:5px;
+	cursor:pointer;
+}
+.user:hover{
+	
+	background: #eef;
+	
+}
+.user:before {
+	
+	content: "";
+	position:absolute;
+	background-color:green;
+	width: 10px;
+	height: 10px;
+	left: 7px;
+	top: 17px;
+	border-radius:5px;
+}
+.message_box_head{
+	
+	background:#3489db;
+	padding: 15px;
+	color: white;
+	border-radius: 5px 5px 0 0;
+	text-align:center;
+	cursor:pointer;
+	
+}
+.message_body{
+		height:250px;
+		overflow-y: scroll;
+		overflow-x: hidden;
+}
+.close{
+	
+	float:right;
+}
+.msg_input {
+	border: transparent;
+	border:#428bca;
+	width:100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-bottom: 2px;
+}
+.msg_footer{	
+	margin-bottom: 0px;
+}
+.message_a {
+	margin-top: 10px;
+	margin-right:18px;
+	margin-left: 18px;
+	padding: 10px;
+	background: #bdc3c7;
+	position:relative;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+.message_a:before {
+	
+	content: "";
+	position:absolute;
+	width: 0px;
+	height: 0px;
+	top: 7px;
+	left: -26px;
+	border: 13px solid ;
+	border-color: transparent #bdc3c7 transparent transparent ;
+	
+	
+	
+}
+.message_b {
+	margin-top: 10px;
+	margin-right:18px;
+	margin-left: 18px;
+	padding: 10px;
+	background: #86c3aa;
+	position:relative;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+.message_b:before {
+	
+	content: "";
+	position:absolute;
+	width: 0px;
+	height: 0px;
+	top: 7px;
+	right: -26px;
+	border: 13px solid ;
+	border-color: transparent  transparent  transparent #86c3aa ;
+}
