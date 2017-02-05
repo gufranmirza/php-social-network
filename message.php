@@ -29,45 +29,21 @@
 
 				echo 'message has been sent';
 				}
-		}
+			}
 		 
-		echo "<form action='message.php?u=$username' method='POST'>
-			<h2>Send message</h2>
-			<input type='text' name='msg_title' placeholder='enter your title'/><br/>
-			<textarea cols='50' rows='12' name='msg_body' placeholder='type your message here....'></textarea></p>
-			<input type='submit' name='send_msg' value='Send'/>
-		</form>"; 
+			echo "<form action='message.php?u=$username' method='POST'>
+				<h2>Send message</h2>
+				<input type='text' name='msg_title' placeholder='enter your title'/><br/>
+				<textarea cols='50' rows='12' name='msg_body' placeholder='type your message here....'></textarea></p>
+				<input type='submit' name='send_msg' value='Send'/>
+			</form>"; 
 		
-		}else{
-			header("Location: $user");
-		}
+			}else{
+				header("Location: $user");
+			}
 	
-	}
+		}
 		
 	}
     	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ?>
