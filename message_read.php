@@ -63,10 +63,8 @@
 	    $query = "SELECT * FROM `pvt_messages` WHERE `user_to` = '$user' && `opened` = 'yes' && `deleted` = 'no'";
 		$grab_messages = mysqli_query($conn, $query);
 		$rows = mysqli_num_rows($grab_messages);
-
 		if($rows != 0){
 		while($get_msg = mysqli_fetch_assoc($grab_messages)){
-
 			$id = $get_msg['id'];
 			$from = $get_msg['user_from'];
 			$to = $get_msg['user_to'];
@@ -77,6 +75,7 @@
 ?>
 
 <script language="javascript">
+	//toggle messages by id
          function toggle<?php echo $id; ?>() {
            var ele = document.getElementById("toggleText<?php echo $id; ?>");
            var text = document.getElementById("displayText<?php echo $id; ?>");
@@ -94,7 +93,7 @@
 
 <?php		
 		if(strlen($body) >150){
-			
+			//get strlen to avoid empty messages
 			$body = substr($body, 0, 150).'.....';
 			echo '<br/>'.$body.'<br/><br/><hr/>';
 			
@@ -114,21 +113,13 @@
 	   echo '<a href='.$from.'>'.$from.'</a></b> 
 	        <form action="message_read.php" method="POST" name="msg_title" id="button_msg">
 			<input type="button" name="openmsg" value="'.$msg_title.'" onclick="javascript:toggle'.$id.'()"/>
-			
-			
 			<input type="submit" name="replay'.$id.'" value="Replay" title="Replay Message">
 			<input type="submit" name="delete'.$id.'" value="X" title="Delete Message">
-			
-			
-			</form>
-		
-		    <div id="toggleText'.$id.'" style="display:none" >'.$body.'</div><br />';	
-		
-			
+		</form>
+		<div id="toggleText'.$id.'" style="display:none" >'.$body.'</div><br />';	
 		}		
 	}	
 	}else{
 		echo 'You have not read any messages yet';
-		
 	}
 ?>
