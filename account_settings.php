@@ -5,7 +5,7 @@ if ($user) {
 }
 else
 {
- die ("You must be logged in to view this page!");
+ 	die ("You must be logged in to view this page!"); 
 }
 ?>
 
@@ -103,7 +103,7 @@ else
   if (isset($_FILES['profilepic'])) {
    if (((@$_FILES["profilepic"]["type"]=="image/jpeg") || (@$_FILES["profilepic"]["type"]=="image/png") || (@$_FILES["profilepic"]["type"]=="image/gif"))&&(@$_FILES["profilepic"]["size"] < 1048576)) //1 Megabyte
   {
-   $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+   $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"; // random chars for file 
    $rand_dir_name = substr(str_shuffle($chars), 0, 15);
    mkdir("userdata/profile_pics/$rand_dir_name");
 
@@ -127,14 +127,6 @@ else
       echo "Invailid File! Your image must be no larger than 1MB and it must be either a .jpg, .jpeg, .png or .gif";
   }
   }
-
-  
-
-
-
-
-
-
 ?>
 
 <div id="container">
